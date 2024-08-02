@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Asul&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/760cba394a.js" crossorigin="anonymous"></script>
+  <title>Pizzaria Buonna</title>
+</head>
+<body>
+  <div id="main" class="main">
+    <nav>
+      <a href="#main">Home</a>
+      <a href="#menu">Cardápio</a>
+      <a href="#who-we-are">Quem somos</a>
+      <a href="#order">Pedido</a>
+      <div class="animation start-home"></div>
+    </nav>WhatsApp
+    <section id="home" class="home-section">
+      <div class="presentation">
+        <div class="present-text">
+          <h1>PizzaHub</h1>
+          <p>Faça seu pedido na melhor da região!</p>
+        </div>
+      </div>
+      <div class="presentation">
+        <img  class="home-image" src="assets/Pizza-home.png" alt="">
+      </div>
+    </section>
+    <section id="menu">
+      <h3>Nosso cardápio</h3>
+      <hr class="solid">
+
+      <div class="menu-iteWhatsAppms">
+        <div onclick="test_pizza()" id="pizza-menu" class="item-pizza">
+          <div class="item-img">
+            <img src="assets/pizza1.png" alt="">
+          </div>
+          <div class="item-img-text">
+            <h4>Pizzas</h4>
+          </div>
+        </div>
+        <div id="drink-menu" onclick="test_drink()" class="drink-item">
+          <div class="item-img">
+            <img src="assets/bebida.png" alt="">
+          </div>
+          <div class="item-img-text">
+            <h4>Bebidas</h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="pizzas">
+        <div class="item-option-div">
+          <div class="item-option-div-img">
+            <img src="assets/calabresa.png" class="pizza-calabresa" alt="Pizza Calabresa">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Calabresa</h4>
+            <p class="pizza-details">Molho, Mussarela, Calabresa, Cebola, Azeitona e Orégano</p>
+            <h4 class="items-cost">R$ 49,90</h4>
+            <button onclick="addItemToCart('pizza', 49.90, 'Pizzas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+        <div class="item-option-div" class="item-option-div">
+          <div class="item-option-div-img">
+            <img src="assets/quatro-queijos.png" class="pizza-quatro-queijos" alt="Pizza Quatro Queijos">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Quatro Queijos</h4>
+            <p class="pizza-details">Molho, Mussarela, Provolone, Parmesão, Gorgonzola, Tomate, Azeitona e Orégano</p>
+            <h4 class="items-cost">R$ 52,00</h4>
+            <button onclick="addItemToCart('pizza', 52.00, 'Pizzas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+        <div class="item-option-div">
+          <div class="item-option-div-img">
+            <img src="assets/italiana.png" class="pizza-img" alt="Pizza Italiana">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Italiana</h4>
+            <p class="pizza-details">Molho, Mussarela, Catupiry, Salaminho, Azeitona e Orégano</p>
+            <h4 class="items-cost">R$ 59,99</h4>
+            <button onclick="addItemToCart('pizza', 59.99, 'Pizzas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+        <div class="item-option-div">
+          <div class="item-option-div-img">
+            <img src="assets/presunto.png" class="pizza-img" alt="Pizza de Presunto">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Presunto</h4>
+            <p class="pizza-details">Molho, Mussarela, Presunto, Tomate, Azeitona e Orégano</p>
+            <h4 class="items-cost">R$ 51,00</h4>
+            <button onclick="addItemToCart('pizza', 51.00, 'Pizzas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="drinks">
+        <div class="item-option-div">
+          <div class="drink-item-large">
+            <img src="assets/coca2l.png" class="drink-image-1" alt="Refrigerante Coca Cola 2L">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Coca Cola 2L</h4>
+            <h4 class="items-cost">R$ 10,00</h4>
+            <button onclick="addItemToCart('drink', 10.00, 'Bebidas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+        <div class="item-option-div">
+          <div class="drink-item-large">
+            <img src="assets/fanta2l.png" class="drink-image-1" alt="Refrigerante Fanta 2L">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Fanta 2L</h4>
+            <h4 class="items-cost">R$ 7,00</h4>
+            <button onclick="addItemToCart('drink', 7.00, 'Bebidas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+        <div class="item-option-div">
+          <div class="drink-item-large">
+            <img src="assets/sprite2l.png" class="drink-image-1" alt="Refrigerante Sprite 2L">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Sprite 2L</h4>
+            <h4 class="items-cost">R$ 7,00</h4>
+            <button onclick="addItemToCart('drink', 7.00, 'Bebidas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+        <div class="item-option-div">
+          <div class="drink-item-large">
+            <img src="assets/antartica.png" class="drink-image-1" alt="Refrigerante Sprite 2L">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Guaraná Antartica 2L</h4>
+            <h4 class="items-cost">R$ 10,00</h4>
+            <button onclick="addItemToCart('drink', 10.00, 'Bebidas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+        <div class="item-option-div">
+          <div class="drink-item-large">
+            <img src="assets/coca1,5.png" class="drink-image-2" alt="Refrigerante Coca Cola 1,5L">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Coca Cola 1,5L</h4>
+            <h4 class="items-cost">R$ 7,00</h4>
+            <button onclick="addItemToCart('drink', 7.00, 'Bebidas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+        <div class="item-option-div">
+          <div class="drink-item-small">
+            <img src="assets/cocalata.png" class="drink-image-3" alt="Refrigerante Coca Cola Lata">
+          </div>
+          <div class="align-center">
+            <h4 class="items">Coca Cola Lata</h4>
+            <h4 class="items-cost">R$ 4,00</h4>
+            <button onclick="addItemToCart('drink', 4.00, 'Bebidas')" class="add-cart-button"><i class="fa-solid fa-cart-plus cart-icon-color"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="who-we-are" class="who-we-are-section">
+      <div class="who-we-are-content">
+        <h3>Quem somos</h3>
+        <hr class="solid">
+        <p>A Pizzaria Buonna Pizza abriu as portas em 1910, fundada pelo pizzaiolo Carmino Corvino quando este veio morar no
+        Brasil, no tradicional bairro paulistano conhecido como Brás.</p>
+      </div>
+      <div class="contato-content">
+        <div class="contact-info">
+          <i class="fa-brands fa-whatsapp contact-info-icon"></i>
+          <p>WhatsApp: (11) 9.7777-7777</p>
+        </div>
+        <div class="contact-info">
+          <i class="fa-brands fa-instagram contact-info-icon"></i>
+          <p>Instagram: @buonnapizza</p>
+        </div>
+      </div>
+    </section>
+    <section id="order">
+      <h3>Pedido</h3>
+      <hr class="solid">
+
+      <div id="toast">
+        <div id="desc">Pedido realizado com sucesso..</div>
+      </div>
+
+      <div id="items" class="pedido-content">
+        <h4 class="align-center">Finalize seu pedido:</h4>
+        <h5 id="empty-cart" class="align-center">Nada adicionado no carrinho.</h5>
+        <h5 id="devliery-started" class="align-center">Pedido a caminho da sua casa.</h5>
+        <div class="order-items">
+          <strong><p id="pizza" class="order-left-text"></p></strong>
+          <p id="pizza-total" class="order-right-text"></p>
+        </div>
+        <div class="order-items">
+          <strong><p id="drink" class="order-left-text"></p></strong>
+          <p id="drink-total" class="order-right-text"></p>
+        </div>
+        <div class="order-items">
+          <strong><p class="order-left-text"></p></strong>
+          <p id="total" class="order-right-text"></p>
+        </div>
+        <div class="order-button-content">
+          <button id="send-order" onclick="launch_toast()" disabled class="order-button"></i>Confirmar pedido</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>
